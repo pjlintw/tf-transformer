@@ -1,0 +1,45 @@
+Epoch: 0
+Train Loss:   0.69, Train Acc:  50.00%
+Train Loss:   0.66, Train Acc:  75.00%
+Train Loss:   0.64, Train Acc:  62.50%
+Train Loss:   0.52, Train Acc:  75.00%
+Train Loss:   0.53, Train Acc:  75.00%
+Train Loss:   0.48, Train Acc:  81.25%
+Train Loss:   0.46, Train Acc:  87.50%
+Train Loss:   0.47, Train Acc:  84.38%
+Epoch: 1
+Train Loss:   0.51, Train Acc:  78.12%
+Train Loss:   0.42, Train Acc:  90.62%
+Train Loss:   0.45, Train Acc:  87.50%
+Train Loss:   0.47, Train Acc:  81.25%
+Train Loss:   0.44, Train Acc:  87.50%
+Train Loss:    0.4, Train Acc:  93.75%
+Train Loss:   0.45, Train Acc:  87.50%
+Train Loss:   0.48, Train Acc:  81.25%
+Epoch: 2
+Train Loss:   0.42, Train Acc:  90.62%
+Train Loss:   0.56, Train Acc:  75.00%
+Train Loss:   0.37, Train Acc:  93.75%
+Train Loss:   0.37, Train Acc:  96.88%
+Train Loss:   0.38, Train Acc:  93.75%
+Train Loss:   0.39, Train Acc:  93.75%
+Train Loss:   0.35, Train Acc:  96.88%
+Train Loss:   0.38, Train Acc:  93.75%
+Epoch: 3
+Train Loss:   0.36, Train Acc:  93.75%
+Train Loss:   0.34, Train Acc:  96.88%
+Train Loss:   0.38, Train Acc:  93.75%
+Train Loss:    0.4, Train Acc:  90.62%
+Train Loss:   0.38, Train Acc:  93.75%
+Train Loss:   0.45, Train Acc:  87.50%
+Train Loss:    0.4, Train Acc:  90.62%
+Train Loss:   0.37, Train Acc:  93.75%
+Epoch: 4
+Train Loss:   0.35, Train Acc:  96.88%
+Train Loss:   0.43, Train Acc:  87.50%
+Train Loss:   0.39, Train Acc:  93.75%
+Train Loss:   0.36, Train Acc:  93.75%
+Train Loss:   0.35, Train Acc:  96.88%
+Train Loss:   0.39, Train Acc:  90.62%
+Train Loss:   0.37, Train Acc:  93.75%
+Train Loss:   0.45, Train Acc:  87.50%
