@@ -1,9 +1,9 @@
 # Transformer - Attention Is ALL You Need  
-A Tensorflow implementation of Transformer in version 1.12. The core fucntions in tranformer such as __scaled dot prodction attention__, __multi-head attention__ and __feedforward network__ were implemented in `nn.py`  
+A Tensorflow implementation of Transformer in version 1.12. The core fucntions in transformer such as __scaled dot prodction attention__, __multi-head attention__ and __feedforward network__, were implemented in `nn.py`  
 
-> For more details: Ashish Vaswani, et al. ["Attention is all you need."](http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf) 
+ > For more details, read the paper: Ashish Vaswani, et al. ["Attention is all you need."](http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf) 
 
-In order to ensure the computational graph, optimizer, loss are correct, this transformer was designed to recontruct sentence using a tiny dataset on Classical Chinese corpus. 
+In order to ensure the computational graph, optimizer and loss functions are correctly design, this transformer was builded to recontruct sentence using a tiny dataset on Classical Chinese corpus. 
 
 Noticed: TF 1.x scripts will not continue to work with TF 2.0. Therefore, the new variants of transformer will move to Tensorflow 2.0.
   
@@ -14,7 +14,7 @@ Noticed: TF 1.x scripts will not continue to work with TF 2.0. Therefore, the ne
 
 # Prerequisites
 ### Dependencies
-- Tensorflow >= 1.12
+- TensorFlow >= 1.12
 - Python >= 3.6
 
 
@@ -22,7 +22,7 @@ Noticed: TF 1.x scripts will not continue to work with TF 2.0. Therefore, the ne
     
 Noticed: 3000 exampels were used for my experiement. Dataset is not provided.  
 
-For training the model, source and target examples should be provided in `data/src.train.example.txt` and `data/tgt.train.example.txt`. Each source example is corresponding to same index of target file.
+For training the model, source and target examples should be provided in `data/src.train.example.txt` and `data/tgt.train.example.txt`. Each source example is corresponding to same index in the target file.
 
 In the reconstruction task, the encoder produces a low-dimension representation by taking source example. The decoder try to reconstruct original sentence by recieved the low-dimension code and target example.
 
@@ -34,11 +34,11 @@ You can replace dataset with parallel corpus for machine translation task. Concr
 
 ### Parameters  
 
-To make sure this code is well implemented and trainable, I trained sentence reconstruction over a tiny Classical Chinese dataset with this repository. Therefore, the parameters were set to overfit  
-on dataset.  
-
-<!-- mdformat off(no table) -->
-
+To make sure this code is well implemented and trainable, I trained sentence reconstruction over a tiny Classical Chinese dataset with this repository. Therefore, the parameters were set to overfit on dataset.   
+  
+  
+<!-- mdformat off(no table) -->  
+  
 | Parameters               | number   | 
 | ------------------------ | -------- |
 | EPOCH                    | 2000     |
@@ -49,11 +49,11 @@ on dataset.
 | NUM HEADS                | 8        |
 | ENCODER SEQUENCE LENGTH  | 100      |
 | DECODER SEQUENCE LENGTH  | 100      |
-
+  
 
 <!-- mdformat on -->
 
-
+  
 
 ### Training
 ```
