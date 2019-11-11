@@ -1,13 +1,11 @@
 # Transformer - Attention Is ALL You Need  
 A Tensorflow implementation of Transformer in version 1.12. The core fucntions in tranformer such as __scaled dot prodction attention__, __multi-head attention__ and __feedforward network__ were implemented in `nn.py`  
 
-In order to ensure the computational graph, optimizer, loss are correct, this transformer was designed to recontruct sentence using a tiny dataset. 
+> For more details: Ashish Vaswani, et al. ["Attention is all you need."](http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf) 
 
-Baseed on the code, other variants of transformer will move to Tensorflow 2.0.
+In order to ensure the computational graph, optimizer, loss are correct, this transformer was designed to recontruct sentence using a tiny dataset on Classical Chinese corpus. 
 
-For more details: Ashish Vaswani, et al. ["Attention is all you need."](http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf) 
-　　
-  
+Noticed: TF 1.x scripts will not continue to work with TF 2.0. Therefore, the new variants of transformer will move to Tensorflow 2.0.
   
   
 [Example](https://towardsdatascience.com/transformer-xl-explained-combining-transformers-and-rnns-into-a-state-of-the-art-language-model-c0cfe9e5a924) for Multi-Head Attention  
