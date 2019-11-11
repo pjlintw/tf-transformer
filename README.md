@@ -3,8 +3,6 @@ A Tensorflow implementation of Transformer in version 1.12. The core fucntions i
 
  > For more details, read the paper: Ashish Vaswani, et al. ["Attention is all you need."](http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf) 
 
-In order to ensure the computational graph, optimizer and loss functions are correctly design, this transformer was builded to recontruct sentence using a tiny dataset on Classical Chinese corpus. 
-
 Noticed: TF 1.x scripts will not continue to work with TF 2.0. Therefore, the new variants of transformer will move to Tensorflow 2.0.
   
   
