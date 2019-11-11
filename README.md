@@ -5,9 +5,14 @@ In order to ensure the computational graph, optimizer, loss are correct, this tr
 
 Baseed on the code, other variants of transformer will move to Tensorflow 2.0.
 
-For more details: Ashish Vaswani, et al. ["Attention is all you need."](http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf)  
+For more details: Ashish Vaswani, et al. ["Attention is all you need."](http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf) 
+　　
+  
+  
+  
+[Example](https://towardsdatascience.com/transformer-xl-explained-combining-transformers-and-rnns-into-a-state-of-the-art-language-model-c0cfe9e5a924) for Multi-Head Attention  
+![](https://github.com/pjlintw/tf-transformer/blob/master/img/multi-head%20attention%20viz.png)
 
-![GitHub Logo](/img/multi-head attention viz.png)
 
 # Prerequisites
 ### Dependencies
