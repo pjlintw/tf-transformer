@@ -75,6 +75,12 @@ source         > 樊穆仲說：魯懿公之弟稱，莊重恭敬地事奉神靈
 
 reconstruction > 樊穆仲說：魯懿公之弟稱，莊重恭敬地事奉神靈，敬重老人；處事執法，必定諮詢先王遺訓及前朝故事；不牴觸先王遺訓，不違背前朝故事。<eos>
 ```
+  
+###  
+* construct the mask correctly.
+* schedule learning rate is must.
+
+
 
 ### Implementation Reference  
 * https://github.com/tensorflow/models/tree/master/official/transformer
