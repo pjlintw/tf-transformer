@@ -1,0 +1,18 @@
+seed: 50
+
+data:
+    raw_path
+    processed_path
+
+model:
+    n_layer: 2
+    d_model: 125
+    n_head: 8
+    encoder_seq: 100
+    decoder_seq: 100
+    
+train:
+    epoch: 2000
+    batch_size: 32
+    dropout_rate: 0.1
+
