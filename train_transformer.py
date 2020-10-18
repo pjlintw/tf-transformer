@@ -22,18 +22,17 @@ def convert_tensor_to_string(x, lookup_table, sess):
     return l
 
 def _pad_sequence_to_same_length(x, y):
-  """Pad x and y as same length"""
-  with tf.name_scope("pad_to_same_length"):
-      x_length = tf.shape(x)[1]
-      y_length = tf.shape(y)[1]
+    """Pad x and y as same length"""
+    with tf.name_scope("pad_to_same_length"):
+        x_length = tf.shape(x)[1]
+        y_length = tf.shape(y)[1]
 
-      max_length = tf.maximum(x_length, y_length)
+    max_length = tf.maximum(x_length, y_length)
 
-      x = tf.pad(x, [[0, 0], [0, max_length - x_length], [0, 0]])
-      y = tf.pad(y, [[0, 0], [0, max_length - y_length]])
+    x = tf.pad(x, [[0, 0], [0, max_length - x_length], [0, 0]])
+    y = tf.pad(y, [[0, 0], [0, max_length - y_length]])
 
-  return x, y
-
+    return x, y
 
 def padded_cross_entropy_loss(logits, labels, smoothing, vocab_size):
     with tf.name_scope("loss", values=[logits, labels]):
@@ -60,20 +59,17 @@ def padded_cross_entropy_loss(logits, labels, smoothing, vocab_size):
     weights = tf.to_float(tf.not_equal(labels, 0))
     return xentropy * weights, weights
 
-
 def create_padding_mask(seq):
-  seq = tf.cast(tf.math.equal(seq, 0), tf.float32)
-  #seq = tf.cast(tf.math.equal(seq, '<pad>'), tf.string)
-  
-  # add extra dimensions to add the padding
-  # to the attention logits.
-  return seq[:, tf.newaxis, tf.newaxis, :]  # (batch_size, 1, 1, seq_len)
+    seq = tf.cast(tf.math.equal(seq, 0), tf.float32)
+    #seq = tf.cast(tf.math.equal(seq, '<pad>'), tf.string)
 
+    # add extra dimensions to add the padding
+    # to the attention logits.
+    return seq[:, tf.newaxis, tf.newaxis, :]  # (batch_size, 1, 1, seq_len)
 
 def create_look_ahead_mask(size):
-  mask = 1 - tf.linalg.band_part(tf.ones((size, size)), -1, 0)
-  return mask  # (seq_len, seq_len)
-
+    mask = 1 - tf.linalg.band_part(tf.ones((size, size)), -1, 0)
+    return mask  # (seq_len, seq_len)
 
 def create_masks(inp, tar):
   # Encoder padding mask
@@ -170,7 +166,14 @@ def trainer(transformer, dataset, num_vocab, num_examples, lookup_table, ids2tok
     tar_inp_ph = tf.placeholder(tf.float32, [None, None])
     tar_real_ph = tf.placeholder(tf.float32, [None, None])
 
-    loss, train_op, _, predictions, pred_ids, mask_m = train_step(source_ph, tar_inp_ph, tar_real_ph, model=transformer, sess=sess, target_vocab_size=num_vocab, global_step=global_step, ids2tok_talbe=ids2tok_talbe)    
+    loss, train_op, _, predictions, pred_ids, mask_m = train_step(source_ph,
+                                                                  tar_inp_ph,
+                                                                  tar_real_ph, 
+                                                                  model=transformer, 
+                                                                  sess=sess, 
+                                                                  target_vocab_size=num_vocab, 
+                                                                  global_step=global_step, 
+                                                                  ids2tok_talbe=ids2tok_talbe)    
     sess.run([tf.global_variables_initializer(), ids2tok_table.init])
 
     ids2tok_dict = dict([ (np.int_(i), ids2tok_dict[i]) for i in ids2tok_dict.keys()])

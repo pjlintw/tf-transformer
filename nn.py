@@ -1,6 +1,6 @@
 """reimplement `attention is all you need`, inspired by `https://kexue.fm/archives/4765/comment-page-1#comments`
-
 """
+
 import numpy as np
 
 import tensorflow as tf
